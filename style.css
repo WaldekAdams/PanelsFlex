@@ -13,8 +13,33 @@ div.panels {
     overflow: hidden;
 }
 
+div.panel.panel1 {
+    background-image: url(/images/grzanki.jpg);
+}
+
+div.panel.panel2 {
+    background-image: url(images/salata.jpg);
+}
+
+div.panel.panel3 {
+    background-image: url(images/antipasti.jpg);
+    background-position: center;
+}
+
+div.panel.panel4 {
+    background-image: url(images/tatar.jpg);
+    background-position: center;
+}
+
+div.panel.panel5 {
+    background-image: url(images/krewetki.jpg);
+    background-position: center;
+    border-right: 0;
+}
+
 div.panel {
-    border: 1px solid red;
+    border-right: 2px solid rgb(4, 6, 138);
+    background-size: cover;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -32,13 +57,17 @@ div.panel.open {
 } */
 
 .panel>* {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     flex-grow: 1;
     width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
     transition: 0.5s;
+    font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
+    color: antiquewhite;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+
 }
 
 .panel p:nth-child(1) {
