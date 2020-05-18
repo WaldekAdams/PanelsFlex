@@ -10,6 +10,7 @@ div.panels {
     /* align-items: center; */
     height: 100%;
     justify-content: center;
+    overflow: hidden;
 }
 
 div.panel {
@@ -17,6 +18,11 @@ div.panel {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    transition: 0.5s;
+}
+
+div.panel:nth-child(2) {
+    flex-grow: 5;
 }
 
 .panel>* {
@@ -26,4 +32,25 @@ div.panel {
     align-items: center;
     justify-content: center;
     display: flex;
+    transition: 0.5s;
+}
+
+.panel p:nth-child(1) {
+    transform: translateY(-100%);
+}
+
+.panel.active p:nth-child(1) {
+    transform: translateY(0);
+}
+
+.panel p:nth-child(2) {
+    font-size: 50px;
+}
+
+.panel p:nth-child(3) {
+    transform: translateY(100%);
+}
+
+.panel.active p:nth-child(3) {
+    transform: translateY(0);
 }
